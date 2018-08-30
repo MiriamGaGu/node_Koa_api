@@ -19,3 +19,8 @@ Check out the following blog posts:
 1. Seed - `knex seed:run --env development`
 1. Sanity check - `npm start`
 1. Test - `npm test`
+
+NOTE:
+To run the test you have to run it like
+*mocha + file name or mocha test*
+chai still not working 
