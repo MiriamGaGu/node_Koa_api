@@ -1,22 +1,40 @@
-//updating after installin "koa@2.3.0 --save"
-
+//Second updating
 const Koa = require('koa');
+const indexRoutes = require('./routes/index');
 
 const app = new Koa();
-const PORT = 1337;
+const PORT = process.env.PORT || 1337;
 
-app.use(async (ctx) => {
-  ctx.body = {
-    status: 'success',
-    message: 'hello, world!'
-  };
-});
+app.use(indexRoutes.routes());
 
 const server = app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);
 });
 
 module.exports = server;
+
+
+//updating after installin "koa@2.3.0 --save"
+
+// const Koa = require('koa');
+
+// const app = new Koa();
+// const PORT = 1337;
+
+// app.use(async (ctx) => {
+//   ctx.body = {
+//     status: 'success',
+//     message: 'hello, world!'
+//   };
+// });
+
+// const server = app.listen(PORT, () => {
+//   console.log(`Server listening on port: ${PORT}`);
+// });
+
+// module.exports = server;
+
+
 // const Koa = require('koa');
 // const bodyParser = require('koa-bodyparser');
 // const session = require('koa-session');
