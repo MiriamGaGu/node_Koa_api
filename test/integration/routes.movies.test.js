@@ -20,6 +20,8 @@ describe('routes : movies', () => {
     return knex.migrate.rollback();
   });
 
+  //GET
+
   describe('GET /api/v1/movies', () => {
     it('should return all movies', (done) => {
       chai.request(server)
@@ -46,7 +48,7 @@ describe('routes : movies', () => {
       });
     });
   });
-
+//GET single  movie
   describe('GET /api/v1/movies/:id', () => {
     it('should respond with a single movie', (done) => {
       chai.request(server)
@@ -69,6 +71,8 @@ describe('routes : movies', () => {
         done();
       });
     });
+
+    //When there is no movie with that id
     it('should throw an error if the movie does not exist', (done) => {
       chai.request(server)
       .get('/api/v1/movies/9999999')
