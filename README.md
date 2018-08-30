@@ -26,4 +26,10 @@ NOTE:
 To run test npm test is not working
 Use mocha test or mocha + filename fo the test
 
-chai is not working still for some reason 
+chai is not working still for some reason
+
+psql also has that error 
+iangu@JaBeats MINGW64 ~/Documents/API/RESTfulAPI/node-koa-api (master)
+$ psql
+bash: psql: command not found
+Doesn't matter if it's installed globally 
